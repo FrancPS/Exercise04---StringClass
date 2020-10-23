@@ -1,19 +1,44 @@
 // Exercise04 - StringClass.cpp : Este archivo contiene la función "main". La ejecución del programa comienza y termina ahí.
-//
+
+#include "String.h";
 
 #include <iostream>
+using namespace std;
+
+
+String GetMeAString() {
+    return String("This is a random string for you!");
+}
+
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    String* a();
+    String b("Jelou");
+    b.Print();
+    String c(b);
+    c.Print();
+    cout << c.length() << endl;
+    c.clear();
+    cout << "Here is the output of a cleared String -> ";
+    c.Print();
+
+    String d(" Uorl");
+
+    String sum = b + d;
+    sum.Print();
+
+    if (b == "Jelou") {
+        cout << "TRUE: boolean works" << endl;
+    }
+    if (!(b == "False")) {
+        cout << "FALSE: boolean works" << endl;
+    }
+    if (!(b == "Jelouoaosid")) {
+        cout << "FALSE: boolean works" << endl;
+    }
+
+    String a = GetMeAString();
 }
 
-// Ejecutar programa: Ctrl + F5 o menú Depurar > Iniciar sin depurar
-// Depurar programa: F5 o menú Depurar > Iniciar depuración
 
-// Sugerencias para primeros pasos: 1. Use la ventana del Explorador de soluciones para agregar y administrar archivos
-//   2. Use la ventana de Team Explorer para conectar con el control de código fuente
-//   3. Use la ventana de salida para ver la salida de compilación y otros mensajes
-//   4. Use la ventana Lista de errores para ver los errores
-//   5. Vaya a Proyecto > Agregar nuevo elemento para crear nuevos archivos de código, o a Proyecto > Agregar elemento existente para agregar archivos de código existentes al proyecto
-//   6. En el futuro, para volver a abrir este proyecto, vaya a Archivo > Abrir > Proyecto y seleccione el archivo .sln
